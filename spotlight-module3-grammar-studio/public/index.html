@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4eee5"><title>Grammar Studio · Module 3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/"><span class="brand-mark">g.</span><span>GRAMMAR <b>STUDIO</b></span></a><nav><button class="nav-btn active" data-view="quiz">Quiz</button><button class="nav-btn" data-view="ranking">Class ranking</button><button class="nav-btn" data-view="admin">Teacher</button></nav></header>
+<main>
+<section id="home" class="hero">
+ <div class="hero-copy"><div class="eyebrow">SPOTLIGHT 11 · MODULE 03</div><h1>Infinitive<br><i>vs</i> Gerund</h1><p class="lead">A little practice makes grammar click.</p><div class="hero-meta"><span>15 QUESTIONS</span><span>·</span><span>15 POINTS</span><span>·</span><span>ONE ATTEMPT AT A TIME</span></div></div>
+ <div class="hero-art"><img src="/cat-grammar.png" alt="A cheerful kitten with the words Infinitive vs Gerund"></div>
+</section>
+<section id="quizView" class="view">
+ <div id="startPanel" class="panel start-panel"><div><div class="eyebrow">READY WHEN YOU ARE</div><h2>Let’s get started.</h2><p>Enter your name to begin. Your result will be saved to the class leaderboard.</p></div><form id="startForm" class="name-form"><label>First name<input id="firstName" required maxlength="40" autocomplete="given-name" placeholder="e.g. Anna"></label><label>Last name<input id="lastName" required maxlength="40" autocomplete="family-name" placeholder="e.g. Smith"></label><button class="primary" type="submit">Start the quiz <span>↗</span></button></form></div>
+ <div id="quizPanel" class="panel hidden"><div class="quiz-head"><div><div class="eyebrow" id="studentGreeting"></div><h2 id="questionCounter">Question 1 of 15</h2></div><div class="score-chip">1 POINT</div></div><div class="progress"><span id="progressBar"></span></div><div id="questionArea"></div><div class="quiz-actions"><span id="answeredCount">0 / 15 answered</span><button id="nextBtn" class="primary" disabled>Next question <span>→</span></button></div></div>
+ <div id="resultPanel" class="panel hidden"></div>
+</section>
+<section id="rankingView" class="view hidden"><div class="section-head"><div><div class="eyebrow">A LITTLE FRIENDLY COMPETITION</div><h2>Class ranking</h2><p>Results appear here after students finish the quiz.</p></div><button class="secondary" id="refreshRanking">Refresh ↻</button></div><div id="rankingContent" class="panel"><p class="muted">Loading results…</p></div></section>
+<section id="adminView" class="view hidden"><div id="adminLogin" class="panel admin-login"><div class="eyebrow">TEACHER ACCESS</div><h2>Welcome back.</h2><p>Sign in to manage exercises and view class results.</p><form id="loginForm"><label>Admin password<input type="password" id="adminPassword" required autocomplete="current-password"></label><button class="primary" type="submit">Sign in <span>↗</span></button><p id="loginError" class="error"></p></form></div>
+<div id="adminPanel" class="hidden"><div class="section-head"><div><div class="eyebrow">TEACHER DASHBOARD</div><h2>Classroom overview</h2></div><button id="logoutBtn" class="secondary">Sign out</button></div><div class="tabs"><button class="tab active" data-admin-tab="results">Results & ranking</button><button class="tab" data-admin-tab="editor">Exercise editor</button></div><div id="adminResults" class="panel"></div><div id="adminEditor" class="panel hidden"></div></div></section>
+</main>
+<footer><span>GRAMMAR STUDIO</span><span>Made for curious minds <b>✳</b></span></footer>
+<script src="/app.js"></script>
+</body></html>
